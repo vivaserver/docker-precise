@@ -13,4 +13,4 @@ ENV LANG en_US.UTF-8
 # ensure access to PPA repos, killer Ubuntu feature
 RUN apt-get -qq install apt-utils
 RUN apt-get -qq install python-software-properties
-RUN apt-get -qq autoclean
+RUN apt-get -qq autoclean && rm -f /var/lib/apt/lists/*
